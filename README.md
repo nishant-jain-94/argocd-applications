@@ -12,4 +12,15 @@
     kubectl create namespace argocd
     kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     ```
-3. 
+3. Port Forward ArgoCD
+    ```bash
+    kubectl port-forward svc/argocd-server -n argocd 8080:443
+    ```
+4. Get the ArgoCD Password. The default username is `admin`
+    ```bash
+    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+    ```
+4. Login
+    ```
+    argocd login localhost:8080
+    ```
