@@ -20,7 +20,11 @@
     ```bash
     kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
     ```
-4. Login
+5. Login
     ```
     argocd login localhost:8080
+    ```
+6. Create Application
+    ```
+    argocd app create odoo --repo 
     ```
