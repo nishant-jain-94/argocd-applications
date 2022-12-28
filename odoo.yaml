@@ -7,7 +7,7 @@ spec:
   project: odoo-project
   source:
     chart: bitnami/odoo
-    repoURL: https://charts.bitnami.com/bitnami/odoo
+    repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 23.0.3
     helm:
       releaseName: odoo
