@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: odoo
+  name: odoo-1
   namespace: argocd
 spec:
   project: default
