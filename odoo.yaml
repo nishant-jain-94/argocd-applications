@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: odoo
+  namespace: argocd
+spec:
+  project: odoo
+  source:
+    chart: bitnami/odoo
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 23.0.3
+    helm:
+      releaseName: odoo
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: odoo
