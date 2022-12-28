@@ -4,7 +4,7 @@ metadata:
   name: odoo-1
   namespace: argocd
 spec:
-  project: default
+  project: odoo-project
   source:
     chart: bitnami/odoo
     repoURL: https://charts.bitnami.com/bitnami/odoo
